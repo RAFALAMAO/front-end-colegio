@@ -3,23 +3,22 @@ import styled, { keyframes } from "styled-components";
 export const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-0%) translateX(-50%);
+    transform: translateY(7%) translateX(-50%);
   }
   to {
     opacity: 1;
-    transform: translateY(-7%) translateX(-50%);
+    transform: translateY(0%) translateX(-50%);
   }
 `
 
 export const Container = styled.div`
-  /* display: inline-block; */
   opacity: 1;
   width: 420px;
+  height: 665px;
   position: absolute;
-  top: 12%;
+  top: 50px;
   left: 50%;
-  transform: translateY(-7%) translateX(-50%);
-  overflow: hidden;
+  transform: translateX(-50%);
 
   color: #FAF9F6;
 
@@ -28,10 +27,23 @@ export const Container = styled.div`
   background: ${'linear-gradient(121.57deg, rgba(179, 42, 244, 0.9) 18.77%, rgba(145, 108, 244, 0.9) 60.15%)'};
 
   border-radius: 10px;
-  bottom: 1px;
 
   animation-name: ${fadeIn};
   animation-duration: .5s;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    top: 10px;
+    width: 80%;
+    height: 489px;
+
+    & img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 `
 
 export const Img = styled.img`
@@ -40,9 +52,6 @@ export const Img = styled.img`
 `
 
 export const H1 = styled.h1`
-  /* display: inline-block; */
-
-  /* background-color: blue; */
   text-align: center;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -50,7 +59,6 @@ export const H1 = styled.h1`
   border-radius: 10px;
 
   color: white;
-
 `
 
 export const Text = styled.div`
@@ -59,15 +67,10 @@ export const Text = styled.div`
 export const Form = styled.ul`
   list-style-type: none;
   padding: 0px 0;
-  row-gap: ;
-  /* display: flex; */
   width: 400px;
   justify-content: left;
   margin: 0px auto;
   text-decoration: none;
-
-
-  /* border: solid 1px black; */
 
   padding-bottom:5px;
 
@@ -89,19 +92,33 @@ export const Form = styled.ul`
       padding: 0;
       padding-left: 10px;
     }
+
+    @media ${(props) => props.theme.breakpoints.sm} {
+      list-style-type: none;
+      padding: 0px 0;
+      justify-content: left;
+      margin: 0px auto;
+      text-decoration: none;
+
+      & input {
+        width:70%;
+        height: 25px;
+        font-size: 15px;
+        border-radius: 10px;
+        background: #e0F9FF;
+        border: solid 1px black;
+        margin: 0px;
+        padding: 0;
+        padding-left: 10px;
+      }
+    }
   }
 
-  /* border: solid 2px black; */
-
   & span  {
-    /* background: white; */
-    /* padding-left: 0px; */
     color: white;
     font-size: 17px;
-
     transition-duration: .5s;
   };
-
 `
 
 export const Button = styled.button`
@@ -119,16 +136,24 @@ export const Button = styled.button`
     background: ${'linear-gradient(121.57deg, rgba(149, 40, 244, 1) 18.77%, rgba(149, 40, 144, .9) 60.15%)'};
     transform: scale(1.02);
   }
-  /* margin: 20px auto; */
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 180px;
+    height: 40px;
+  }
 `
 
 export const ButtonContainer = styled.div`
   width: 250px;
-  margin: 30px auto;
+  margin: 50px auto;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 180px;
+    margin: 10px auto;
+  }
 `
 
 export const Select = styled.select`
-  /* width: 100%; */
   height: 30px;
   background: rgba(179, 42, 244, 0.9);
   border-radius: 10px;
@@ -159,28 +184,20 @@ export const Select = styled.select`
 
 export const Links = styled.ul`
   list-style-type: none;
-  /* margin: 0; */
   padding: 0;
-  display: flex;
   width: 400px;
-  /* justify-content: center; */
   margin: 0px 0;
   overflow: hidden;
   text-decoration: none;
 
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
 
-  /* border: solid 1px black; */
-
   padding-bottom: 40px;
 
-  /* border: solid 2px black; */
-
   & span  {
-    /* background: white; */
     padding-left: 60px;
     color: #b7e7f7;
     font-size: 17px;
@@ -189,10 +206,22 @@ export const Links = styled.ul`
   };
 
   & span:hover  {
-    /* background: white; */
     color: #f0a0f0;
     text-decoration: underline;
     font-size: 18px;
   };
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    bottom: -20px;
+    padding-left: 60px;
+    & span  {
+      padding: 30px;
+      font-size: 15px;
+    };
+
+    & span:hover  {
+      font-size: 16px;
+    };
+  }
 
 `

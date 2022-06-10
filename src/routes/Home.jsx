@@ -10,9 +10,9 @@ export default function Home() {
         <H1>Welcome to VitReact College</H1>
         <Img src={HomeIcon} alt="" />
         <Links>
-            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/about"><span>About</span></Link></li>
-            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/login"><span>Login</span></Link></li>
-            <li><a href="https://www.w3schools.com" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
+            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/about"><span>About</span></Link></li>
+            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/login"><span>Login</span></Link></li>
+            <li><a href="https://github.com/RAFALAMAO/front-end-colegio/tree/master" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
         </Links>
     </Container>
   )

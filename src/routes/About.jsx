@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
-import { Container, Grid, H1, Links, Text } from './AboutSyles';
+import { Container, Grid, H1, Links, Table, Text } from './AboutSyles';
 
 import axios from "axios";
 
@@ -51,50 +51,52 @@ export default function Home() {
       <Grid>
         <Text>
           <p>In this web application you can login as a Student or Teacher and make the following things:</p>
-          <h4>Teacher:</h4>
+          <h4>Teacher</h4>
           <p>Add, delete, modify and consult information about each student, also change password.</p>
-          <h4>Student:</h4>
+          <h4>Student</h4>
           <p>Consult marks by subject and change password.</p>
           <p>This page have its own REST API Back-End developed in NodeJs with a MySLQ database.</p>
-          <p>The following table shows some teacher and student accounts.</p>
+          <p>The following table shows some teacher's and student's accounts got it from Back-End.</p>
         </Text>
         <Text>
-          <h4>Teachers Table</h4>
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Password</th>
-            </tr>
-          {Teachers.map((teacher) => (
+          <h4>Teachers</h4>
+          <Table>
+            <tbody>
               <tr>
-                <td>{teacher.nombre}</td>
-                <td>{teacher.contrasena}</td>
+                <th>Name</th>
+                <th>Password</th>
               </tr>
-              // <p key={teacher.id}>{teacher.nombre}</p>
-          ))}
-          </table>
+              {Teachers.map((teacher) => (
+                <tr key={teacher.id}>
+                  <td>{teacher.nombre}</td>
+                  <td>{teacher.contrasena}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
 
-          <h4>Students Table</h4>
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Password</th>
-            </tr>
-          {Students.map((student) => (
-            <tr>
-              <td>{student.nombre}</td>
-              <td>{student.contrasena}</td>
-            </tr>
-              // <p key={student.id}>{student.nombre}</p>
-          ))}
-          </table>
+          <h4>Students</h4>
+          <Table>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Password</th>
+              </tr>
+              {Students.map((student) => (
+                <tr key={student.id}>
+                  <td>{student.nombre}</td>
+                  <td>{student.contrasena}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </Text>
 
       </Grid>
       <Links>
-          <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/"><span>Home</span></Link></li>
-          <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/login"><span>Login</span></Link></li>
-          <li><a href="https://www.w3schools.com" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
+          <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/"><span>Home</span></Link></li>
+          <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/login"><span>Login</span></Link></li>
+          <li><a href="https://github.com/RAFALAMAO/front-end-colegio/tree/master" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
       </Links>
     </Container>
     )

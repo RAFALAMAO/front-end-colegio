@@ -22,12 +22,14 @@ export default function Home() {
         </Select> </p>
         </Form>
         <ButtonContainer>
-          <Button>Submit</Button>
+          <Button onClick={() => {
+            console.log('first')
+          }}>Submit</Button>
         </ButtonContainer>
         <Links>
-            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/about"><span>About</span></Link></li>
-            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/"><span>Home</span></Link></li>
-            <li><a href="https://www.w3schools.com" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
+            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/about"><span>About</span></Link></li>
+            <li><Link style={{ textDecoration: 'none', float: 'left' }} to="/front-end-colegio/"><span>Home</span></Link></li>
+            <li><a href="https://github.com/RAFALAMAO/front-end-colegio/tree/master" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
         </Links>
     </Container>
   )
