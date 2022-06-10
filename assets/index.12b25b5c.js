@@ -371,18 +371,19 @@ Error generating stack: `+i.message+`
   border-collapse: collapse;
   width: 100%;
   border: solid 1px black;
+  /* background-color: #24005e; */
 
   & th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
   }
 
   & td {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
 `,p1=ye.h1`
   /* display: inline-block; */
 
