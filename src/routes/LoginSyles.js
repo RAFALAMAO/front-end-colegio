@@ -199,9 +199,10 @@ export const Links = styled.ul`
   transform: translateX(-50%);
 
   padding-bottom: 40px;
+  padding-left: 60px;
 
   & span  {
-    padding-left: 60px;
+    padding: 30px;
     color: #b7e7f7;
     font-size: 17px;
 
@@ -216,9 +217,7 @@ export const Links = styled.ul`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     bottom: -20px;
-    padding-left: 60px;
     & span  {
-      padding: 30px;
       font-size: 15px;
     };
 

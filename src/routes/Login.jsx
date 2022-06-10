@@ -11,19 +11,40 @@ export default function Home() {
         <Img src={LoginIcon} alt="" />
         <Form>
           <li><span>User</span></li>
-          <li><input type="text" placeholder='Refalamao' /></li>
+          <li><input type="text" placeholder='Refalamao' id='user' /></li>
           <br />
           <br />
           <li><span>Password</span></li>
-          <li><input type="password" placeholder='**********' /></li>
-          <p>User type:&nbsp;<Select name="selectedRTSP" id="selectedRTSP">
-          <option value="teacher">Teacher</option>
-          <option value="student">Student</option>
+          <li><input type="password" placeholder='**********' id='password' /></li>
+          <p>User type:&nbsp;<Select name="selectedRTSP" id="userType">
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
         </Select> </p>
         </Form>
         <ButtonContainer>
           <Button onClick={() => {
-            console.log('first')
+            const userType = document.getElementById("userType");
+            const user = document.getElementById("user");
+            const password = document.getElementById("password");
+
+            if( user.value === "" ){
+              alert("User is needed");
+            } else if( password.value === "" ){
+              alert("Password is needed");
+            } else {
+              let data = {
+                User: user.value,
+                Password: password.value,
+                UserType: userType.value
+              }
+              let message = `
+                You submitted:\n
+                ${JSON.stringify(data, null, 1)}\n
+                Login cooming soon!
+              `
+              alert(message);
+            }
+
           }}>Submit</Button>
         </ButtonContainer>
         <Links>
