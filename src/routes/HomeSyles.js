@@ -12,13 +12,16 @@ export const Container = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+
   text-align: center;
   background-color: #e0e0e9;
   border-radius: 10px;
   height: 725px;
 
   animation-name: ${fadeIn};
-  animation-duration: 2s;
+  animation-duration: 1s;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     top: 10px;

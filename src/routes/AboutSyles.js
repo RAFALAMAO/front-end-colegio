@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 export const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-57%);
+    transform: translateY(7%) translateX(-50%);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%);
+    transform: translateY(0%) translateX(-50%);
   }
 `
 
@@ -31,13 +31,16 @@ export const Container = styled.div`
   transform: translateX(-50%);
   width: 80%;
 
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+
   color: whitesmoke;
 
   text-align: justify;
   padding: 30px;
   padding-bottom: 60px;
   background: rgba(224, 224, 233, 1);
-  background: ${'linear-gradient(121.57deg, #24005e 18.77%, #51005e 60.15%)'};
+  background: ${'linear-gradient(121.57deg, #24005e 18.77%, rgba(81, 0, 94, 0.98) 60.15%)'};
 
   border-radius: 10px;
 

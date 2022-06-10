@@ -20,11 +20,14 @@ export const Container = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+
   color: #FAF9F6;
 
   text-align: left;
   padding: 30px;
-  background: ${'linear-gradient(121.57deg, rgba(179, 42, 244, 0.9) 18.77%, rgba(145, 108, 244, 0.9) 60.15%)'};
+  background: ${'linear-gradient(121.57deg, rgba(179, 42, 244, 1) 18.77%, rgba(145, 108, 244, 0.98) 60.15%)'};
 
   border-radius: 10px;
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { Container, Grid, H1, Links, Table, Text } from './AboutSyles';
 
+import { Spinner } from "../components/Spinner";
+
 import axios from "axios";
 
 export default function Home() {
@@ -39,12 +41,12 @@ export default function Home() {
 
   {
     if( Loading.teachers === true || Loading.students === true   ){
-      return null;
+    // if( true ){
+      return <Spinner/>;
     }
   }
 
   return (
-    null ? Loading === true : (
     <Container>
       <H1>About</H1>
       <hr/>
@@ -99,6 +101,5 @@ export default function Home() {
           <li><a href="https://github.com/RAFALAMAO/front-end-colegio/tree/master" target="_blank" style={{ textDecoration: 'none', float: 'left' }}><span>Source Code</span></a></li>
       </Links>
     </Container>
-    )
   )
 }
