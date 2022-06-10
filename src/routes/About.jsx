@@ -57,7 +57,7 @@ export default function Home() {
           <p>Add, delete, modify and consult information about each student, also change password.</p>
           <h4>Student</h4>
           <p>Check grades by subject and change password.</p>
-          <p>This page have its own REST API Back-End developed in NodeJs with a MySLQ database.</p>
+          <p>This page have its own REST API Back-End developed with NodeJs, Express and MySLQ.</p>
           <p>The following table shows some teacher's and student's accounts got it from Back-End.</p>
         </Text>
         <Text>
